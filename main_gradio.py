@@ -2,7 +2,7 @@
 import gradio as gr
 import pandas as pd
 import joblib
-from sklearn.ensemble import RandomForestClassifier  # Example model
+
 
 
 

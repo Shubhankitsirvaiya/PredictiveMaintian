@@ -7,10 +7,12 @@ import joblib
 model = joblib.load('model.pkl')
 
 # Define the Streamlit app
+
 def main():
     st.title("Predictive Maintainence")
 
     # Define the input fields
+    
     Type = st.selectbox('Type', [0, 1, 2])
     Air_temp = st.number_input('Air temperature [K]', min_value=0.0, step=0.1)
     Process_temp = st.number_input('Process temperature [K]', min_value=0.0, step=0.1)
@@ -21,6 +23,7 @@ def main():
 
     # Create a button to make predictions
     if st.button('Predict'):
+        
         # Create a DataFrame for the input
         input_data = pd.DataFrame({
             'Type': [Type],
